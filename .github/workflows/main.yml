@@ -34,3 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - uses: tvrcgo/deploy-to-docker@v0.3.1
+        with:
+          registry: registry.cn-shenzhen.aliyuncs.com
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: tvrcgo/app-boilerplate
+
